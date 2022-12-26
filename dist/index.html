@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <script src="main.js" defer></script>
+    <div class="column">
+        <header class="column center"> <!-- Instructions-->
+            <h1>mram_ToDo</h1>
+            <h5 class="center">Version 1.0</h5>
+        </header>
+        <main>
+            <div class="column center" id="sidebar"> <!--Choose project to sort-->
+                <h3>Choose a project:</h3>
+                <div id="project-content">
+
+                </div>
+                <label for="todo-entry">New Project: </label>
+                <input type="text" class="todo-item" id="todo-entry" name="todo-entry">
+                <button>Add</button>
+            </div>
+            <div class="center" id="todo"> <!--Displays cards-->
+                <div id="todo-form">
+                    <h3>What should I do today?</h3>
+                    <label for="todo-entry"></label>
+                    <input type="text" class="todo-item" id="todo-entry" name="todo-entry">
+                    <label for="todo-date"></label>
+                    <input type="date" class="todo-item" id="todo-date" name="todo-date">
+                    <label for="todo-category"></label>
+                    <select name="todo-category">
+                        <option value="null">Please enter some projects!</option>
+                    </select>   
+                    <button>Add</button>
+                </div>
+                <div id="todo-content">
+
+                </div>
+
+            </div>
+        </main>
+        <footer></footer> <!-- Theme picker-->
+    </div>
+</body>
+</html>
