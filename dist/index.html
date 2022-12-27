@@ -18,36 +18,40 @@
             <div class="column center" id="sidebar"> <!--Choose project to sort-->
                 <h3>Choose a project:</h3>
                 <div id="project-content">
-
+                    <button class="project-item">Personal</button>
                 </div>
-                <label for="project-entry">New Project: </label>
-                <input type="text" id="project-entry" name="project-entry">
+                <input type="text" id="project-entry" name="project-entry" placeholder="New project...">
                 <button id="project-submit">Add</button>
             </div>
             <div id="todo"> <!--Displays cards-->
                 <div id="todo-form">
                     <h3>What should I do today?</h3>
                     <label for="todo-entry"></label>
-                    <input type="text" id="todo-entry" name="todo-entry">
+                    <input type="text" id="todo-entry" name="todo-entry" placeholder="Check my email...">
                     <label for="todo-date"></label>
                     <input type="date" id="todo-date" name="todo-date">
                     <label for="todo-category"></label>
                     <select name="todo-category">
-                        <option value="null">Please enter some projects!</option>
+                        <option value="null">Please choose a project!</option>
                     </select>   
+                    <select name="todo-priority">
+                        <option value="1">Low Priority (!)</option>
+                        <option value="2">Medium Priority (!!)</option>
+                        <option value="3">High Priority (!!!)</option>
+                    </select>   
+                    <label for="todo-desc"></label>
+                    <input type="text" id="todo-desc" name="todo-desc" placeholder="Enter a description...">
                     <button>Add</button>
                 </div>
                 <div id="todo-content">
                     <div class="todo-item">
                         <input type="checkbox">
                         <h1>Sample</h1>
-                        <h4>!</h4>
+                        <h1>!!!</h1>
                         <p>Description</p>
                         <h4>Dec 27, 2022</h4>
                     </div>
-                    
                 </div>
-
             </div>
         </main>
         <footer></footer> <!-- Theme picker-->

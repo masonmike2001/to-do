@@ -63,18 +63,20 @@ main {
 
 #todo-form {
     width: 60%;
+    margin-left: -290px;
 }
 
 #todo-form>#todo-entry {
-    width: 100%;
+    width: 132%;
     height: 30%;
     margin-bottom: 5px;
+    margin-left: -2px;
 }
 
 #project-entry {
     height: 3%;
-    width: 70%;
-    margin: 9px auto;
+    width: 400px;
+    margin: 9px 30px;
 }
 
 input[type="text"], button {
@@ -88,24 +90,26 @@ input {
 }
 
 #project-submit {
-    width: 30%;
-    margin: 0 auto;
+    width: 170px;
+    margin: 0 150px;
 }
 
 #todo-content {
-    margin-top: 40px;
+    margin-top: 80px;
     width: 80%;
 }
 .todo-item {
     display: grid;
     border-radius: 10px;
-    background-color: #9beeff;
+    border: #ffffff solid 1px;
+    background-color: #6100fc;
     padding:  5px 20px;
     height: 70%;
     grid-template: 2fr 1fr / 1fr 4fr 2fr 1fr ;
+    color: #ffffff;
 }
 
-.todo-item>h1 {
+.todo-item>h1:first-of-type {
     grid-column: 2 / span 2;
     margin: auto 0;
 }
@@ -113,6 +117,7 @@ input {
 .todo-item>p {
     text-align: center;
     margin: auto 0;
+    margin-left: 40px;
 }
 
 .todo-item>h4:last-of-type {
@@ -124,4 +129,26 @@ input {
     grid-column: 1;
     width: 25%;
     margin: 0 auto;
+}
+
+#project-entry, #project-submit {
+    position: fixed;
+}
+
+#project-submit {
+    bottom: 10px;
+}
+
+#project-entry {
+    bottom: 40px;
+}
+
+.project-item {
+    background-color: #6100fc;
+    border: #ffffff solid 1px;
+    color: white;
+    margin: 10px 25px;
+    width: 70%;
+    height: 100%;
+    border-radius: 10px;
 }
