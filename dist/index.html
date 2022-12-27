@@ -20,17 +20,17 @@
                 <div id="project-content">
 
                 </div>
-                <label for="todo-entry">New Project: </label>
-                <input type="text" class="todo-item" id="todo-entry" name="todo-entry">
-                <button>Add</button>
+                <label for="project-entry">New Project: </label>
+                <input type="text" id="project-entry" name="project-entry">
+                <button id="project-submit">Add</button>
             </div>
-            <div class="center" id="todo"> <!--Displays cards-->
+            <div id="todo"> <!--Displays cards-->
                 <div id="todo-form">
                     <h3>What should I do today?</h3>
                     <label for="todo-entry"></label>
-                    <input type="text" class="todo-item" id="todo-entry" name="todo-entry">
+                    <input type="text" id="todo-entry" name="todo-entry">
                     <label for="todo-date"></label>
-                    <input type="date" class="todo-item" id="todo-date" name="todo-date">
+                    <input type="date" id="todo-date" name="todo-date">
                     <label for="todo-category"></label>
                     <select name="todo-category">
                         <option value="null">Please enter some projects!</option>
@@ -38,7 +38,14 @@
                     <button>Add</button>
                 </div>
                 <div id="todo-content">
-
+                    <div class="todo-item">
+                        <input type="checkbox">
+                        <h1>Sample</h1>
+                        <h4>!</h4>
+                        <p>Description</p>
+                        <h4>Dec 27, 2022</h4>
+                    </div>
+                    
                 </div>
 
             </div>
