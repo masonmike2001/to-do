@@ -21,27 +21,29 @@
                     <button class="project-item">Personal</button>
                 </div>
                 <input type="text" id="project-entry" name="project-entry" placeholder="New project...">
-                <button id="project-submit">Add</button>
+                <button id="project-submit" class="form-btn">Add</button>
             </div>
             <div id="todo"> <!--Displays cards-->
                 <div id="todo-form">
                     <h3>What should I do today?</h3>
-                    <label for="todo-entry"></label>
-                    <input type="text" id="todo-entry" name="todo-entry" placeholder="Check my email...">
-                    <label for="todo-date"></label>
-                    <input type="date" id="todo-date" name="todo-date">
-                    <label for="todo-category"></label>
-                    <select name="todo-category">
-                        <option value="null">Please choose a project!</option>
-                    </select>   
-                    <select name="todo-priority">
-                        <option value="1">Low Priority (!)</option>
-                        <option value="2">Medium Priority (!!)</option>
-                        <option value="3">High Priority (!!!)</option>
-                    </select>   
-                    <label for="todo-desc"></label>
-                    <input type="text" id="todo-desc" name="todo-desc" placeholder="Enter a description...">
-                    <button>Add</button>
+                    <form>
+                        <label for="todo-entry"></label>
+                        <input type="text" id="todo-entry" name="todo-entry" placeholder="Check my email..." required>
+                        <label for="todo-date"></label>
+                        <input type="date" id="todo-date" name="todo-date">
+                        <label for="todo-category"></label>
+                        <select id="todo-category" required>
+                            <option value="0">Please choose a project!</option>
+                        </select>   
+                        <select id="todo-priority"  required>
+                            <option value="1">Low Priority (!)</option>
+                            <option value="2">Medium Priority (!!)</option>
+                            <option value="3">High Priority (!!!)</option>
+                        </select>   
+                        <label for="todo-desc"></label>
+                        <input type="text" id="todo-desc" name="todo-desc" placeholder="Enter a description...">
+                    </form>
+                    <button id="todo-submit" class="form-btn">Add</button>
                 </div>
                 <div id="todo-content">
                     <div class="todo-item">
