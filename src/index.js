@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
-import {compareAsc, format} from 'date-fns';
-import {populateProjects, populateTodo, clearChildren} from './Modules/manipulateDOM.js';
-import {createTodoItem, initTodo, populateCategoryDropdown} from './Modules/todo.js';
+// import {compareAsc, format} from 'date-fns';
+import {populateProjects, populateTodo, clearChildren, populateCategoryDropdown} from './Modules/manipulateDOM.js';
+import {createTodoItem, deleteTodoItem} from './Modules/todo.js';
 import {createProject, deleteProject} from './Modules/projects.js';
 
 const projects = [];
@@ -14,12 +14,15 @@ rigForms();
 */
 function rigForms() {
   const buttons = document.querySelectorAll('.form-btn');
-  console.log(buttons);
   buttons[0].addEventListener('click', function() {
     createProject(projects);
+    clearChildren(document.querySelector('#project-content'));
+    populateProjects(projects);
+    populateCategoryDropdown(projects);
   });
   buttons[1].addEventListener('click', function() {
     createTodoItem(items);
-    console.log(items[0]);
+    clearChildren(document.querySelector('#todo-content'));
+    populateTodo(items);
   });
 }
