@@ -52,6 +52,17 @@ export function clearChildren(content) {
   }
 }
 
+/**
+ * Removes all DOM children of todo list div, freeing area
+ * @param  {Array} projects The array of all current projects
+*/
 export function populateCategoryDropdown(projects) {
-
+  const categoryDropdown = document.querySelector('#todo-category');
+  const categories = [];
+  for (let i = 0; i < projects.length; i++) {
+    categories[i] = document.createElement('option');
+    categories[i].textContent = projects[i];
+    categories[i].value = i;
+    categoryDropdown.appendChild(categories[i]);
+  }
 }

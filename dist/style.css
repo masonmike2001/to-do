@@ -153,12 +153,9 @@ input {
     margin: 0 auto;
 }
 
-#project-entry, #project-submit {
-    position: fixed;
-}
-
 #project-submit {
     bottom: 10px;
+    margin-bottom: 30px;
 }
 
 #project-entry {
