@@ -4,13 +4,11 @@
 */
 export function createProject(projects) {
   if (!document.querySelector('#project-entry').value) return;
-  for (let i = 0; i < projects.length; i++)
-  {
+
+
+  for (let i = 0; i < projects.length; i++) {
     if (projects[i] === document.querySelector('#project-entry').value) return;
   }
   projects[projects.length] = document.querySelector('#project-entry').value;
-}
-
-export function deleteProject() {
-
+  console.log(projects);
 }

@@ -1,10 +1,9 @@
 /**
- * Displays all projects in to do list in #project-content
+ * Displays all projects in to do list in #project-content, and adds click event
  * @param  {Array} projects The array of all current todo items
 */
 export function populateProjects(projects) {
   const content = document.querySelector('#project-content');
-
   for (let i = 0; i < projects.length; i++) {
     const category = document.createElement('button');
     category.textContent = projects[i];
@@ -15,7 +14,7 @@ export function populateProjects(projects) {
 }
 
 /**
- * Displays all items in to do list in #todo-content
+ * Displays all items in a category in order of time.
  * @param  {Array} items The array of all current todo items
 */
 export function populateTodo(items) {
@@ -43,8 +42,8 @@ export function populateTodo(items) {
 }
 
 /**
- * Removes all DOM children of todo list div, freeing area
- * @param  {Array} content The array of all current todo items
+ * Removes all DOM children of todo list div, clearing an element
+ * @param  {Array} content The DOM element to be cleared
 */
 export function clearChildren(content) {
   while (content.firstChild) {
@@ -53,11 +52,12 @@ export function clearChildren(content) {
 }
 
 /**
- * Removes all DOM children of todo list div, freeing area
- * @param  {Array} projects The array of all current projects
+ * Reloads all options in category drop down with updated projects
+ * @param  {Array} projects The array of projects
 */
 export function populateCategoryDropdown(projects) {
   const categoryDropdown = document.querySelector('#todo-category');
+  clearChildren(categoryDropdown);
   const categories = [];
   for (let i = 0; i < projects.length; i++) {
     categories[i] = document.createElement('option');
@@ -65,4 +65,28 @@ export function populateCategoryDropdown(projects) {
     categories[i].value = i;
     categoryDropdown.appendChild(categories[i]);
   }
+}
+
+/**
+ * Determines category, finds todo-item objects that match, and repopulates
+ * list with those items
+ * @param  {int} category The string of the clicked project category
+ * @param  {Array} items The array of all current projects
+*/
+export function projectOnClick(category, items) {
+  const projectItems = [];
+  let target;
+  const projectButtons = document.querySelectorAll('.project-item');
+  for (let i = 0; i < projectButtons.length; i++) {
+    if (projectButtons[i].textContent === category) {
+      target = i;
+    }
+  }
+  for (let j = 0; j < items.length; j++) {
+    if (target == items[j].project) {
+      projectItems[projectItems.length] = items[j];
+    }
+  }
+  clearChildren(document.querySelector('#todo-content'));
+  populateTodo(projectItems);
 }

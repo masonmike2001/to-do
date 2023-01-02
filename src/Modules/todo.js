@@ -12,7 +12,3 @@ export function createTodoItem(items) {
     complete: false,
   };
 }
-
-export function deleteTodoItem() {
-
-}
